@@ -1,0 +1,164 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+#usuarioInfo {
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+
+}
+
+body {
+    background: url("https://pbs.twimg.com/media/EF1cvMDX0AA0FbH.jpg:large");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+h1,
+h2 {
+    color: red;
+}
+h2{
+    font-size: 32px;
+}
+.card-styles {
+    background-color: white;
+    width: 50%;
+    padding: 30px;
+    border-radius: 42px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button-styles {
+    background: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    border: #3939d7 2px solid;
+    margin: auto;
+}
+
+#bienvenido img {
+    width: 150px;
+}
+
+#bienvenido {
+    align-items: center;
+}
+
+.card-styles input {
+    height: 40px;
+    margin: 30px;
+    border: #6b6bd5 2px solid;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pokeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.pokeContainer input {
+    margin: 0;
+    height: auto;
+
+}
+
+.pokeContainer div {
+    margin: 30px;
+    width: 100%;
+}
+
+#aviso1,
+#aviso2,
+#aviso3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+#tienda-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 40px
+   
+}
+
+.card {
+    background: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    border-radius: 27px;
+    width: 15%;
+    box-shadow: 10px 10px 10px #0a0eff54;
+    
+}
+
+.card img {
+    width: 100px;
+}
+
+.card button {
+    background: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    border: #3939d7 2px solid;
+    margin-top:30px;
+}
+
+#carrito-boton-seccion button a{
+    text-decoration: none;
+    color: black;
+}
+
+#carrito-boton-seccion {
+    padding-top: 50px;
+}
+.pokeContainer div img{
+    width: 17%;
+}
+
+#piedra-fuego, #piedra-agua, #piedra-hoja {
+    flex-direction: column;
+    padding: 35px;
+    border-radius: 27px;
+    box-shadow: 10px 10px 10px #0a0eff54;
+    align-items: center;
+}
+#piedra-fuego img, #piedra-agua img, #piedra-hoja img {
+    width:150px;
+}
+@media only screen and (max-width: 667px) {
+    #tienda-container {
+        
+        flex-direction: column;
+    
+        margin: 40px
+    }
+
+    .card{
+        width: auto;
+
+    }
+}

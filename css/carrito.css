@@ -1,0 +1,64 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+body {
+    background: url("https://pbs.twimg.com/media/EF1cvMDX0AA0FbH.jpg:large");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+h1,
+h2 {
+    color: red;
+}
+
+.card-styles {
+    background-color: white;
+    width: 50%;
+    padding: 30px;
+    border-radius: 42px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button-styles {
+    background: none;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 25px;
+    border: #3939d7 2px solid;
+    
+    margin: auto;
+}
+
+#carrito-seccion, #productos-comprados {
+    border: 2px #c2bdff solid;
+    border-radius: 30px;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#productos-comprados p {
+    border-top: 5px black dotted;
+    padding: 20px;
+
+}
+
+#gracias, #sin-monedas {
+    justify-content: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

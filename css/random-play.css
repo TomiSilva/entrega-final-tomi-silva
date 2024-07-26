@@ -1,0 +1,84 @@
+
+
+body {
+    background-image:url("https://wallpapers.com/images/hd/pokemon-card-pictures-7g0mrmm3f22v4c2l.jpg");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.blur {
+    backdrop-filter: blur(10px)
+}
+
+.first-child{
+    border: 10px solid #b5ebe4;
+    border-radius: 5px;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5bbf58a6-1e85-4cfe-83fd-02df6f482b45/de8nlib-6bed7b3d-3d7e-4763-bb60-18f5ee0127fd.png/v1/fill/w_1024,h_652,q_80,strp/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjUyIiwicGF0aCI6IlwvZlwvNWJiZjU4YTYtMWU4NS00Y2ZlLTgzZmQtMDJkZjZmNDgyYjQ1XC9kZThubGliLTZiZWQ3YjNkLTNkN2UtNDc2My1iYjYwLTE4ZjVlZTAxMjdmZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ZVgNGi61AOkC068E-wphWmAUW8amj0MiJySqDcMCVh8);
+
+}
+
+.first-child, .display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+.first-child img{
+    width: 60%;
+    background:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/denyxek-e3205bd3-ce6c-4134-bf04-445592a06071.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGVueXhlay1lMzIwNWJkMy1jZTZjLTQxMzQtYmYwNC00NDU1OTJhMDYwNzEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XcdkrCNQAHJSc-_k556-MhGAZX_Qos3_ir9hRAVTnNg");
+    margin: 30px;
+    padding: 45px;
+    border-radius: 4px;
+    background-size: cover;
+    border: 4px solid #b5ebe4
+}
+
+.first-child h3 {
+    margin : 30px
+}
+.card-container{
+    padding: 100px;
+    background: white;
+    border-radius: 4px;
+    margin: 30px;
+}
+
+.first-child h2 {
+    width: 70%;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    color: rgb(29, 110, 11);
+}
+
+.first-child div {
+    color: rgb(72, 60, 204);
+    background: #b5ebe4;
+    justify-content: space-around;
+    
+    border: 3px solid rgb(29, 110, 11);
+    margin: 30px;
+    border-radius: 9px;
+    display: flex;
+}
+
+#poke-card-container {
+   
+    border-radius: 5px;
+    width: 60%;
+    margin: 100px;
+}
+
+button {
+    padding: 10px;
+    font-size: 26px;
+    border-radius: 15px;
+    color: red;
+    border: 3px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button:hover {
+    transform: scale(1.3)
+}

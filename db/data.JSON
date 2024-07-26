@@ -1,0 +1,25 @@
+ [
+    {
+        "id": 1,
+        "img": "https://ghostwalker186.wordpress.com/wp-content/uploads/2013/10/potion.png",
+       "nombre": "Poción",
+        "precio": 500,
+        "puntosVida": 500
+   },
+
+    {
+      "id": 2,
+      "img": "https://ghostwalker186.wordpress.com/wp-content/uploads/2013/10/potion.png",
+       "nombre": "Super Poción",
+       "precio": 1000,
+        "puntosVida": 2000
+    },
+
+   {
+       "id": 3,
+       "img": "https://ghostwalker186.wordpress.com/wp-content/uploads/2013/10/potion.png",
+        "nombre": "Hiper Poción",
+        "precio": 1500,
+        "puntosVida": 2500
+    }
+]
