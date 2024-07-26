@@ -39,12 +39,18 @@ h2{
 }
 
 .button-styles {
-    background: none;
+    background: white;
     font-size: 20px;
     padding: 15px;
     border-radius: 25px;
     border: #3939d7 2px solid;
-    margin: auto;
+    margin: 30px;
+
+}
+
+.button-styles a {
+    text-decoration: none;
+    color: black;
 }
 
 #bienvenido img {

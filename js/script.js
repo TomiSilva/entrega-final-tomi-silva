@@ -16,7 +16,7 @@ let continuarTienda = document.querySelector("#next");
 let continuarContenedor = document.querySelector("#continuar");
 let seccionTienda = document.querySelector(".seccion-tienda");
 let contenedorTienda = document.querySelector("#tienda-container");
-let botonCarrito = document.querySelector("#carrito-boton-seccion");
+let boton = document.querySelector("#carrito-boton-seccion");
 let piedraFuego = document.querySelector("#piedra-fuego");
 let piedraAgua = document.querySelector("#piedra-agua");
 let piedraHoja = document.querySelector("#piedra-hoja");
@@ -24,6 +24,9 @@ let usuarioN;
 let usuarioM;
 let usuarioP;
 let usuario = [];
+let pokeN;
+let pokeT;
+let pokemon = [];
 
 
 
@@ -53,6 +56,18 @@ class Usuario {
 
 }
 
+class Pokemon {
+    static id = 0;
+    static nombre;
+    static tipo;
+    constructor(nombre, tipo) {
+        this.id = ++Pokemon.id;
+        this.nombre = nombre;
+        this.tipo = tipo;
+
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////Metodo para crear usuario.
 crearUsuario = () => {
     const usuarioNew = new Usuario(usuarioN, usuarioM, usuarioP);
@@ -75,6 +90,7 @@ let tarjetaBienvenido = () => {
     <h1>Bienvenidx al Centro Pokemon!</h1>
     <img src="https://64.media.tumblr.com/2ebf328e6e4a2bc57b0dc5c1b1004a5b/tumblr_pyffs3pYjQ1ywnabyo1_640.png" alt="">
     <p id="parrafo1"> Primero tenemos que ingresarte... ¿Empezamos?</p>
+    <button class="button-styles" > <a href="./random-play.html">Prefiero jugar un juego!</a> </button>
     `
     boton.addEventListener("click", () => {
         tarjetaNombre()
@@ -82,8 +98,8 @@ let tarjetaBienvenido = () => {
     bienvenido.appendChild(boton)
     bienvenido.insertBefore(contenedor, bienvenido.firstChild);
 }
+setTimeout(tarjetaBienvenido(), 1000);
 
-tarjetaBienvenido()
 
 let tarjetaNombre = () => {
 
@@ -132,6 +148,7 @@ let tarjetaMonedas = () => {
     aviso.innerHTML = `Ingresá una cantidad válida de monedas`
     inputM.type = "number";
     inputM.pattern = "^[0-9]+"
+    inputM.min = "1";
     boton.type = "button";
     boton.innerHTML = "Listo!";
     boton.className = "button-styles"
@@ -184,6 +201,7 @@ let escogerPokemon = () => {
     const boton = document.createElement("button")
     boton.type = "button";
     boton.innerHTML = "Listo!";
+     boton.className = "button-styles"
 
 
 
@@ -201,7 +219,7 @@ let escogerPokemon = () => {
     inputB.type = "radio"
     inputB.id = "Bulbasaur"
 
-
+   
     /// Contenedor
     let contenedor = document.createElement("div")
     contenedor.innerHTML = `<p id="parrafo1"> Elija uno de los siguientes starters: </p>`
@@ -209,29 +227,29 @@ let escogerPokemon = () => {
 
     //contenedorPokemones
     let contenedorC = document.createElement("div")
-    contenedorC.innerHTML = `<img src="https://img.itch.zone/aW1nLzI0ODQ0NjcuZ2lm/347x500m/FOj44r.gif" alt="">
+    contenedorC.innerHTML = `<img src="./img/charmander.png" alt="">
                         <label for="1"> Charmander</label>`
 
     let contenedorB = document.createElement("div")
-    contenedorB.innerHTML = `<img src="https://static.wikia.nocookie.net/pokemon-radiance/images/7/7b/226_Bulbasaur.png/revision/latest?cb=20201127011423" alt="">
+    contenedorB.innerHTML = `<img src="./img/bulbasaur.webp" alt="">
                         <label for="2">Bulbasaur</label>`
 
     let contenedorS = document.createElement("div")
-    contenedorS.innerHTML = `<img src="https://static.wikia.nocookie.net/pokemon-radiance/images/e/e9/232_Squirtle.png/revision/latest/thumbnail/width/360/height/360?cb=20201026010633" alt="">
+    contenedorS.innerHTML = `<img src="./img/squirtle.webp" alt="">
 
                         <label for="3">Squirtle</label>`
-  /////agregarlos al html 
+    /////agregarlos al html 
 
 
-    
+
     pokeContainer.appendChild(contenedorC);
     contenedorC.appendChild(inputC);
 
-    
+
     pokeContainer.appendChild(contenedorS);
     contenedorS.appendChild(inputS);
 
-    
+
     pokeContainer.appendChild(contenedorB);
     contenedorB.appendChild(inputB);
 
@@ -246,35 +264,77 @@ let escogerPokemon = () => {
 
     }
 
-    
-    console.log(arrayInputs)
+
+
 
     boton.addEventListener("click", () => {
-        añadirPokemon();
-    })
+        
+        
     
+        añadirPokemon();
+        console.log("poke" + arrayInputs)
+    })
+
 }
 
 let añadirPokemon = () => {
+ let aviso = document.createElement("div")
+ aviso.innerHTML = `<h3> Tenés que ingresar una opción valida </h3>`
     
     for (const input of arrayInputs) {
         ;
-         if (input.checked) {
+        if (input.checked) {
             usuarioP = input.id
+            pokeN = input.id
+
+            switch (usuarioP) {
+                case  "Charmander":
+                    pokeT = "Fuego"
+                    break;
+
+                case "Squirtle":
+                    pokeT = "Agua"
+                    break;
+
+                case "Bulbasaur":
+                    pokeT = "Hoja"
+                    break;
+
+                default:
+                    break;
+            }
+            
+        let newPoke = new Pokemon(pokeN, pokeT)
+        pokemon.push(newPoke)
+        localStorage.setItem("pokemon", JSON.stringify(pokemon))
+        } else {
+            pokeContainer.appendChild(aviso)
         }
-     }
 
-     crearUsuario();
-     Swal.fire({
-        title: 'Gracias por Registrarte!',
-        text: 'Ahora pasemos a la tienda',
-        icon: 'success',
-        confirmButtonText: '<a href="./tienda.html"">Ok!</a>'
-      })
-     console.log(usuario)
+       
+    }
+
+    if (usuarioP == "Charmander" || usuarioP == "Bulbasaur" || usuarioP == "Squirtle") {
+        crearUsuario();
+        Swal.fire({
+            title: 'Gracias por Registrarte!',
+            text: 'Ahora pasemos a la tienda',
+            icon: 'success',
+            confirmButtonText: '<a href="./tienda.html"">Ok!</a>'
+        })
+
+    } else {
+
+        console.log("no");
+    }
 
 
-     localStorage.setItem("usuario", JSON.stringify(usuario))
+    
+    
+    
+
+
+    localStorage.setItem("usuario", JSON.stringify(usuario))
 }
 
 

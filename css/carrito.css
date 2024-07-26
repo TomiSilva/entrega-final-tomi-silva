@@ -31,13 +31,17 @@ h2 {
 }
 
 .button-styles {
-    background: none;
+    background: white;
     font-size: 20px;
     padding: 15px;
     border-radius: 25px;
     border: #3939d7 2px solid;
     
     margin: auto;
+}
+
+.button-styles a {
+    text-decoration: none;
 }
 
 #carrito-seccion, #productos-comprados {
@@ -47,11 +51,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-#productos-comprados p {
-    border-top: 5px black dotted;
-    padding: 20px;
-
-}
 
 #gracias, #sin-monedas {
     justify-content: center;
